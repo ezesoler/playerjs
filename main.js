@@ -6,12 +6,12 @@ window.onload = function () {
     const bar = document.querySelector('#bar');
 
     function toggleBtn() {
-        if (media.paused === false) {
+        if (media.paused) {
+			media.play();
+            btn.classList.add('pause');
+        } else {
             media.pause();
             btn.classList.remove('pause');
-        } else {
-            media.play();
-            btn.classList.add('pause');
         }
     }
 
